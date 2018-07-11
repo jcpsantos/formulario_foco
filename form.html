@@ -1,0 +1,423 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Foco Multimídia-Nova Reserva</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS-Bootstrap-3-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen">
+        <!--Font-->
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <div class="formulario-valores col-md-12">
+                <h1 class="title-value blue">Pesquisa</h1>
+            </div>    
+            <form class="formulario">
+                <section class="col-md-12 form-inline pesquisa">        
+                    <div class="form-group form-unique">
+                        <select class="form-control form-status" name="origem">
+                            <option>Origem</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-unique form-margin">
+                        <select class="form-control form-status" name="tarifario">
+                            <option>Tarifário</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-unique form-margin">
+                        <select class="form-control form-status" name="canal" value="canal">
+                            <option>Canal</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-unique form-margin">
+                        <input type="text" class="form-control form-status" id="cupom" value="" name="cupom" placeholder="Cupom">
+                    </div>
+                    <div class="form-group form-unique form-date1 form-margin" style="position: relative;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="svg-calendar">
+                            <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                        <input type="text" class="form-control form-status-calendar check1 form-margin" id="checkin" value="Check-In" name="checkin" onfocus="(this.type='date')">
+                    </div>
+                    <div class="form-group form-unique form-date2 form-margin" style="position: relative;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="svg-calendar">
+                            <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                        <input type="text" class="form-control form-status-calendar check2 form-margin" id="checkout" value="Check-Out" name="checkout" onfocus="(this.type='date')">
+                    </div>
+                    <div class="form-group form-unique form-margin">
+                        <select class="form-control form-status" name="acomodacao">
+                            <option>Qtde. Acomodação</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-unique form-margin">
+                        <select class="form-control form-status" name="categoria">
+                            <option>Categoria</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="checkbox form-unique form-checkbox form-margin">
+                        <input type="checkbox" name="incentivo" value="0" id="incentivo"><label class="data-incentivo"> Aplicar incentivos</label> 
+                    </div>
+                    <button type="submit" class="btn btn-blue btn-form1">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Pesquisar
+                    </button>
+                </section>
+                <section class="col-md-12 formulario-cliente">
+                    <h1 class="blue">Cliente</h1>
+                    <div class="row margin-day">
+                        <div id="form-cliente">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-client" id="name" value="" placeholder="Nome / E-mail / CPF" name="name">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-client" id="email" value="" placeholder="E-mail" name="email">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-client telefone" value="" placeholder="Telefone" name="telefone" maxlength="15" id="telefone">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-client" id="nascimento" value="Nascimento" name="nascimento" onfocus="(this.type='date')">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <select class="form-control form-client" name="genero" value="" id="genero">
+                                        <option>Gênero</option>
+                                        <option>M</option>
+                                        <option>F</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-blue btn-form2">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-green btn-form3">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Novo Cliente
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <a type="button" class="btn btn-blue btn-form4 btn-js" data-toggle="modal" data-target=".bs-example-modal-lg" id="btn-click-modal"> Cadastro Completo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade bs-example-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content modal-body-special">
+                                    <div class="modal-header modal-header-blue">
+                                        <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title title-modal" id="myModalLabel">Cadastro Completo</h4>
+                                    </div>
+                                    <div class="modal-body" style="margin-bottom: 150px">
+                                        <form id="form-modal">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control form-client" id="name2" value="" placeholder="Nome / E-mail / CPF" name="name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control form-client" id="email2" value="" placeholder="E-mail" name="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client telefone" value="" placeholder="Telefone" name="telefone" maxlength="15" id="telefone2">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client" id="nascimento2" value="" name="nascimento" onfocus="(this.type='date')" placeholder="Nascimento">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control form-client" name="genero" value="" id="genero2">
+                                                                        <option>Gên.</option>
+                                                                        <option>M</option>
+                                                                        <option>F</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client telefone"  value="" placeholder="Outro Telefone" name="telefoneDois" maxlength="15">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client" id="cep" value="" placeholder="CEP" name="cep" maxlength="9" onblur="pesquisacep(this.value)">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control form-client" id="logradouro" value="" placeholder="Logradouro" name="logradouro">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client" id="bairro" value="" placeholder="Bairro" name="bairro">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client" id="cidade" value="" placeholder="Cidade" name="cidade">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control form-client" id="estado" value="" placeholder="UF" name="estado">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control " rows="3" placeholder="Observações"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default btn-modal" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-blue btn-modal">Salvar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="resultado col-md-12">
+                <h1 class="blue">Valores</h1>
+                <div class="row margin-day">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        <div class="row valign-wrapper">
+                            <div class="col-md-3 col-xs-12 col-sm-3">
+                                <div class="scroll">
+                                    <div class="box-scroll">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-6 col-sm-3 text-center border-right">
+                                            <div class="space-date">
+                                                <span class="week">Qua</span><br>
+                                                <span class="week-date">15/06</span><br>
+                                            </div>
+                                            <input type="text" class="form-control week-value" value="" placeholder="R$ 200,00" name="value">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 col-sm-3 text-center border-right">
+                                            <div class="space-date">
+                                                <span class="week">Qua</span><br>
+                                                <span class="week-date">15/06</span><br>
+                                            </div>
+                                            <input type="text" class="form-control week-value" value="" placeholder="R$ 200,00" name="value">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 col-sm-3 text-center border-right">
+                                            <div class="space-date">
+                                                <span class="week">Qua</span><br>
+                                                <span class="week-date">15/06</span><br>
+                                            </div>
+                                            <input type="text" class="form-control week-value" value="" placeholder="R$ 200,00" name="value">
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 col-sm-3 text-center">
+                                            <div class="space-date">
+                                                <span class="week">Qua</span><br>
+                                                <span class="week-date">15/06</span><br>
+                                            </div>
+                                            <input type="text" class="form-control week-value" value="" placeholder="R$ 200,00" name="value">
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-sm-3 col-md-offset-3">
+                                <h1 class="title-blue">Valor Antigo</h1>
+                                <div class="col-md-4 col-sm-4 text-right border-right padding-vtax">
+                                    <span class="text-value">Taxas <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style="fill: #ffeb3b">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                                        </svg>
+                                    </span><br>
+                                    <span class="tax-value">R$ 70,00</span><br>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-right border-right padding-vtax">
+                                    <span class="text-value">Total Diárias</span><br>
+                                    <span class="tax-value">R$ 700,00</span>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-right padding-value">
+                                    <span class="text-value">Total Reserva</span><br>
+                                    <span class="total-value-red">R$ 770,00</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-sm-3">
+                                <h1 class="title-blue">Valor Atual</h1>
+                                <div class="col-md-4 col-sm-4 text-right border-right padding-vtax">
+                                    <div>
+                                        <span class="text-value">Taxas <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style="fill: #ffeb3b">
+                                            <path d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                                            </svg>
+                                        </span><br>
+                                        <span class="tax-value">R$ 50,00</span><br>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-right border-right padding-vtax">
+                                    <span class="text-value">Total Diárias</span><br>
+                                    <span class="tax-value">R$ 500,00</span>
+                                    
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-right padding-value">
+                                    <span class="text-value">Total Reserva</span><br>
+                                    <span class="total-value">R$ 550,00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-md-offset-10 padding-value-right">
+                            <input type="text" class="form-control week-value" value="" placeholder="Entrada" name="entrada">
+                        </div>
+                        <div class="col-md-1 padding-value-left">
+                            <input type="text" class="form-control week-value" value="" placeholder="Saldo" name="saldo" disabled>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+            <section class="pagamento col-md-12">
+                <h1 class="blue">Pagamento</h1>
+                <div class="row margin-day">
+                    <div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select class="form-control form-client" name="pagamento" value="pagamento">
+                                    <option>Forma de Pagamento</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select class="form-control form-client" name="status" value="status">
+                                    <option>Status</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-md-offset-3" id="reserva-form">
+                            <div class="form-group">
+                                <select class="form-control form-client" name="reserva" id="reserva" oninput="changeSelect(this.value)">
+                                    <option>Selecione</option>
+                                    <option value="reserva">Reserva</option>
+                                    <option value="preReserva">Pré-Reserva</option>
+                                    <option value="orcamento">Orçamento</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="display: none" id="deadline-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-client" id="deadline" value="Deadline" name="deadline" onfocus="(this.type='date')">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <button class="btn btn-blue btn-form4" type="submit">Confirmar</button>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </section>    
+        </form>   
+        </main>
+        <div class="fixed-action-btn">
+            <a id="notification" class="btn btn-floating" data-toggle="modal" data-target=".modal-notification">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white">
+                    <path d="M18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-5 0h-2v-2h2v2zm0-4h-2V8h2v4zm-1 10c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2z"/>
+                    <path fill="none" d="M0 0h24v24H0V0z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="modal fade modal-notification" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content modal-body-special">
+                <div class="modal-header modal-header-red">
+                    <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title title-modal" id="myModalLabel">Notificação</h4>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sapien mauris. Praesent vitae sapien.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sapien mauris. Praesent vitae sapien.
+                </div>  
+              </div>
+            </div>
+        </div>
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--JavaScript-Bootstrap-3-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--JS-Mask-->
+        <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+        <!--MyJS-->
+        <script src="js/script.js"></script>
+    </body>
+</html>
